@@ -10,7 +10,8 @@ import {
   MenuGroup,
   MenuOptionGroup,
   MenuDivider,
-  Button
+  Button,
+  Box
 } from '@chakra-ui/react'
 import { CiCircleChevDown } from "react-icons/ci";
 import { MdOutlineFastfood } from "react-icons/md";
@@ -18,7 +19,7 @@ import { MdOutlineFastfood } from "react-icons/md";
 
 const NavBar = () => {
   return (
-    <div className='navbar'>
+    <Box className='navbar'>
       <Heading><MdOutlineFastfood />FastFood</Heading>
       <Menu>
       {({ isOpen }) => (
@@ -42,7 +43,7 @@ const NavBar = () => {
     </Menu>
 
     <CartWidget/>
-    </div>
+    </Box>
   )
 }
 

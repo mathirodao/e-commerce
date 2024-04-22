@@ -1,13 +1,14 @@
-import React from 'react'
+import { Box } from '@chakra-ui/react';
+import React, { useState } from 'react'
 import { FaShoppingCart } from "react-icons/fa";
 
-const CartWidget = () => {
+const CartWidget = ({ itemCount }) => { 
+
   return (
-    <div>
+    <Box style={{ color: 'black' }}>
       <FaShoppingCart />
-      0
-    </div>
-    
+      {itemCount}
+    </Box>
   )
 }
 

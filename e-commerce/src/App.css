@@ -5,6 +5,17 @@
   text-align: center;
 }
 
+.app-container {
+  padding-top: 70px; 
+  position: relative;
+  z-index: 1;
+}
+
+.content-container {
+  padding: 2rem;
+  z-index: 0; 
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -20,6 +31,7 @@
   margin-right: 10px; 
 }
 
+
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -32,6 +44,12 @@
 }
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.item-image {
+  object-fit: cover; 
+  width: 100%; 
+  height: 200px; 
 }
 
 @keyframes logo-spin {

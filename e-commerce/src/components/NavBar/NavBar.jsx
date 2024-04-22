@@ -6,21 +6,24 @@ import {
   MenuButton,
   MenuList,
   MenuItem,
-  MenuItemOption,
-  MenuGroup,
-  MenuOptionGroup,
-  MenuDivider,
   Button,
   Box
 } from '@chakra-ui/react'
 import { CiCircleChevDown } from "react-icons/ci";
 import { MdOutlineFastfood } from "react-icons/md";
+import { Link } from 'react-router-dom';
+import { products } from '../../data/asyncMock';
+import Cart from '../Cart/Cart';
 
+const NavBar = ({itemCount}) => {
+  const categories = [...new Set(products.map(product => product.category))];
 
-const NavBar = () => {
   return (
-    <Box className='navbar'>
-      <Heading><MdOutlineFastfood />FastFood</Heading>
+    <Box className='navbar' position="fixed" top="0" height='70px' width="100%" backgroundColor="white" boxShadow="md" zIndex="999" display='flex' alignItems='center' paddingX='20px'>
+      <Link to='/' style={{display: 'flex', alignItems: 'center'}}>
+        <MdOutlineFastfood style={{ marginRight: '5px', fontSize: '24px' }} />
+        <Heading size='md' lineHeight='1'>FastFood</Heading>
+      </Link>
       <Menu>
       {({ isOpen }) => (
         <>
@@ -28,21 +31,17 @@ const NavBar = () => {
             {isOpen ? 'Close' : 'Open'}
           </MenuButton>
           <MenuList>
-            <MenuItem>
-              Burgers
-            </MenuItem>
-            <MenuItem>
-              Milanesas
-            </MenuItem>
-            <MenuItem>
-              Pizzas
-            </MenuItem>
+            <Link to='/'><MenuItem>Menú</MenuItem></Link>
+            {categories.map(category => (
+              <Link to={`/category/${category}`} key={category}>
+                <MenuItem>{category}</MenuItem>
+              </Link>
+            ))}
           </MenuList>
         </>
       )}
     </Menu>
-
-    <CartWidget/>
+    <Link to='/cart' element={<Cart />}><CartWidget itemCount={itemCount} /></Link>
     </Box>
   )
 }

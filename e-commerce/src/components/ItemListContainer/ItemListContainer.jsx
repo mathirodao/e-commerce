@@ -1,28 +1,35 @@
 import React, { useEffect, useState } from 'react'
 import ItemCount from '../ItemCount/ItemCount'
-import { getProducts } from '../../data/asyncMock'
+import { getProducts, getProductsByCategory } from '../../data/asyncMock'
 import ItemList from '../ItemList/ItemList';
+import { useParams } from 'react-router-dom'
+import { PacmanLoader } from 'react-spinners'
 
-const ItemListContainer = ({title, message}) => {
+const ItemListContainer = ({title}) => {
   const [products, setProducts] = useState([])
+  const { categoryId } = useParams()
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-      getProducts(products)
-      .then((el) => {
-        setProducts(el);
-      })
-      .catch((err) =>console.log(err))
-  }, [])
+    setLoading(true)
+    const dataProducts = categoryId ? getProductsByCategory(categoryId) : getProducts()
 
-  
+
+    dataProducts
+      .then((el) =>  setProducts(el))
+      .catch((err) => console.log(err))
+      .finally(() => setLoading(false))
+    }, [categoryId])
+
 
   return (
     <div>
-      <h1>{title}</h1>
-      <h2>{message}</h2>
-      <ItemCount/>
-
-      <ItemList products={products}/>
+      {
+        loading ?
+        <PacmanLoader color="#000000" />
+        :
+        <ItemList products={products}/>
+      }
     </div>
   )
 }

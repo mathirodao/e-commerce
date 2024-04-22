@@ -1,17 +1,18 @@
 import React from 'react'
 import Item from '../Item/Item'
-import { Box } from "@chakra-ui/react";
+import { Box, Flex, Spacer, SimpleGrid } from "@chakra-ui/react";
 
 const ItemList = ({products}) => {
-    console.log(products)
   return (
-    <Box className='cardContainer'>
+    <SimpleGrid columns={[1, 2, 3]} spacing={4} className='cardContainer'>
         {products.map((elem) =>(
             <Box key={elem.id}>
                 <Item {...elem} />
+                <Spacer />
             </Box>
+            
         ))}
-    </Box>
+    </SimpleGrid>
   )
 }
 

@@ -7,26 +7,33 @@ import PageNotFound from './components/PageNotFound/PageNotFound'
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
 import { useState } from 'react'
 import Cart from './components/Cart/Cart'
+import { ContextProvider } from './context/CartContext'
+
 
 function App() {
   const [cartItemCount, setCartItemCount] = useState(0);
 
   return (
     <ChakraProvider>
-      <BrowserRouter>
-        <NavBar className="navbar" itemCount={cartItemCount} />
-        <Box className="app-container">
-          <Box className="content-container">
-            <Routes>
-              <Route path="/" element={<ItemListContainer title="Nuestro Menú"/>}/>
-              <Route path="/category/:categoryId" element={<ItemListContainer title="Tienda"/>}/>
-              <Route path="/product/:productId" element={<ItemDetailContainer cartItemCount={cartItemCount} updateCartItemCount={setCartItemCount}/>}/>
-              <Route path="*" element={<PageNotFound />}/>
-              <Route path="/cart" element={<Cart />}/>
-            </Routes>
+
+      <ContextProvider>
+
+        <BrowserRouter>
+          <NavBar className="navbar" itemCount={cartItemCount} />
+          <Box className="app-container">
+            <Box className="content-container">
+              <Routes>
+                <Route path="/" element={<ItemListContainer title="Nuestro Menú"/>}/>
+                <Route path="/category/:categoryId" element={<ItemListContainer title="Tienda"/>}/>
+                <Route path="/product/:productId" element={<ItemDetailContainer cartItemCount={cartItemCount} updateCartItemCount={setCartItemCount}/>}/>
+                <Route path="/cart" element={<Cart />}/>
+                <Route path="*" element={<PageNotFound />}/>
+              </Routes>
+            </Box>
           </Box>
-        </Box>
-      </BrowserRouter>
+        </BrowserRouter>
+      
+      </ContextProvider>
     </ChakraProvider>
   )
 }

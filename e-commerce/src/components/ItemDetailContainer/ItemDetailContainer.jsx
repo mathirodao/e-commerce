@@ -22,13 +22,10 @@ const ItemDetailContainer = ({ updateCartItemCount }) => {
             .catch((err) => console.log(err))
     }, [productId, navigate])
 
-    const addToCart = (quantity) => {
-      updateCartItemCount(prevCount => prevCount + quantity);
-    };
 
   return (
     <Box>
-      <ItemDetail {...product} onAddToCart={addToCart} />
+      <ItemDetail {...product} />
     </Box>
   )
 }

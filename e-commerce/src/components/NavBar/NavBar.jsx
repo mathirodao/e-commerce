@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import CartWidget from '../CartWidget/CartWidget'
 import {
   Heading,
@@ -14,9 +14,11 @@ import { MdOutlineFastfood } from "react-icons/md";
 import { Link } from 'react-router-dom';
 import { products } from '../../data/asyncMock';
 import Cart from '../Cart/Cart';
+import Context, { ContextProvider } from '../../context/CartContext';
 
-const NavBar = ({itemCount}) => {
+const NavBar = () => {
   const categories = [...new Set(products.map(product => product.category))];
+  const { getQuantity } = useContext(Context);
 
   return (
     <Box className='navbar' position="fixed" top="0" height='70px' width="100%" backgroundColor="white" boxShadow="md" zIndex="999" display='flex' alignItems='center' paddingX='20px'>
@@ -41,7 +43,7 @@ const NavBar = ({itemCount}) => {
         </>
       )}
     </Menu>
-    <Link to='/cart' element={<Cart />}><CartWidget itemCount={itemCount} /></Link>
+    <Link to='/cart' element={<Cart />}><CartWidget itemCount={getQuantity()} /></Link>
     </Box>
   )
 }

@@ -1,4 +1,4 @@
-import React , { useState } from 'react'
+import React , { useContext, useState } from 'react'
 import { 
   Button, 
   ButtonGroup, 
@@ -23,15 +23,41 @@ import { MdOutlineFastfood } from "react-icons/md";
 import ItemCount from '../ItemCount/ItemCount'
 import { Link } from 'react-router-dom';
 import Cart from '../Cart/Cart';
+import Context from '../../context/CartContext';
+// import { Bounce, ToastContainer, toast } from 'react-toastify';
+import { Bounce, toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-const ItemDetail = ({name, price, description, stock, img, onAddToCart}) => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+
+const ItemDetail = ({id, name, price, description, stock, img}) => {
   const [qty, setQty] = useState(1);
+
+  const {addItem} = useContext(Context)
   
   const onAdd = (quantity) => {
-      setQty(quantity)
-      onOpen();
-      onAddToCart(quantity);
+    
+    const item = {
+      id,
+      name,
+      price,
+      stock
+    }
+    addItem(item, quantity)
+    
+    setQty(quantity)
+
+    toast.success('🦄 Producto agregado al carrito!', {
+      position: 'bottom-right',
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: 'dark',
+      transition: Bounce
+    });
+
   }
 
   return (
@@ -63,21 +89,21 @@ const ItemDetail = ({name, price, description, stock, img, onAddToCart}) => {
       <ItemCount stock={stock} initialValue={1} onAdd={onAdd}/>
     </CardFooter>
 
-      <Modal onClose={onClose} isOpen={isOpen} isCentered>
-        <ModalOverlay />
-        <ModalContent>
-          <ModalHeader><MdOutlineFastfood/></ModalHeader>
-          <ModalCloseButton />
-          <ModalBody>
-            Se han agregado {qty} producto/s al carrito exitosamente.
-          </ModalBody>
-          <ModalFooter>
-            <Button onClick={onClose}>Close</Button>
-            <Link to='/cart' element={<Cart />}><Button variant='ghost'>Terminar compra</Button></Link>
-          </ModalFooter>
-        </ModalContent>
-      </Modal>
+      <ToastContainer
+        position='bottom-right'
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme='dark'
+      />
+
     </Card>
+    
   )
 }
 

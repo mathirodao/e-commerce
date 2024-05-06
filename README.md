@@ -30,6 +30,15 @@ FastFood is a fast food e-commerce platform that allows users to explore and pur
 
     React Router: Used for navigation within the application.
 
+### Project execution
+
+## To run the project locally:
+
+    1. Clone the repository from [GitHub](https://github.com/tu-usuario/fastfood).
+    2. Install the dependencies using `npm install`.
+    3. Create a `.env` file to configure Firebase credentials.
+    4. Run the project with `npm run dev`.
+
 ### Credits
 
 This project was created by Mathias Rodao.

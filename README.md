@@ -22,6 +22,8 @@ FastFood is a fast food e-commerce platform that allows users to explore and pur
 
     React.js: Used for creating the client-side user interface.
 
+    React Vite: Used for project setup and rapid development environment.
+
     Chakra UI: Used for design and creation of user interface components.
 
     Firebase: Used as a real-time database to store information about products and orders.
@@ -56,11 +58,20 @@ FastFood es un e-commerce de comida rápida que permite a los usuarios explorar 
 
     React.js: Utilizado para la creación de la interfaz de usuario del cliente.
 
+    React Vite: Utilizado para la configuración del proyecto y el entorno de desarrollo rápido.
+
     Chakra UI: Utilizado para el diseño y la creación de componentes de interfaz de usuario.
 
     Firebase: Utilizado como base de datos en tiempo real para almacenar información sobre productos y pedidos.
 
     React Router: Utilizado para la navegación dentro de la aplicación.
+
+### Para ejecutar el proyecto localmente:
+
+    1. Clona el repositorio desde [GitHub](https://github.com/mathirodao/e-commerce).
+    2. Instala las dependencias utilizando `npm install`.
+    3. Crea un archivo `.env` para configurar las credenciales de Firebase.
+    4. Ejecuta el proyecto con `npm run dev`.
 
 Créditos
 

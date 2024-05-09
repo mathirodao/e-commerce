@@ -1,4 +1,5 @@
-# Project Documentation: e-commerce / Documentación del Proyecto e-commerce 
+
+# FastFood
 
 ## Project Description
 
@@ -19,20 +20,7 @@ FastFood is a fast food e-commerce platform that allows users to explore and pur
     Billing Checkout: Users can proceed to checkout where they are prompted to complete a billing form with their name, email address, email verification, delivery address, and other details necessary for delivery.
     
 ### Technologies Used
-- ![React.js](https://img.shields.io/badge/-React.js-61DAFB?style=flat-square&logo=React&logoColor=white) [React.js](https://reactjs.org/)
-- ![React Vite](https://img.shields.io/badge/-React_Vite-646CFF?style=flat-square&logo=Vite&logoColor=white) [React Vite](https://vitejs.dev/guide/)
-- ![Chakra UI](https://img.shields.io/badge/-Chakra_UI-319795?style=flat-square&logo=Chakra-UI&logoColor=white) [Chakra UI](https://chakra-ui.com/)
-- ![Firebase](https://img.shields.io/badge/-Firebase-FFCA28?style=flat-square&logo=Firebase&logoColor=black) [Firebase](https://firebase.google.com/)
-- ![React Router DOM](https://img.shields.io/badge/-React_Router_DOM-CA4245?style=flat-square&logo=React-Router&logoColor=white) [React Router DOM](https://reactrouter.com/web/guides/quick-start)
-
-jeje
-
-- [React.js](https://reactjs.org/) ![React.js](https://img.shields.io/badge/-React.js-61DAFB?style=flat-square&logo=React&logoColor=white)
-- [React Vite](https://vitejs.dev/guide/) ![React Vite](https://img.shields.io/badge/-React_Vite-646CFF?style=flat-square&logo=Vite&logoColor=white)
-- [Chakra UI](https://chakra-ui.com/) ![Chakra UI](https://img.shields.io/badge/-Chakra_UI-319795?style=flat-square&logo=Chakra-UI&logoColor=white)
-- [Firebase](https://firebase.google.com/) ![Firebase](https://img.shields.io/badge/-Firebase-FFCA28?style=flat-square&logo=Firebase&logoColor=black)
-- [React Router DOM](https://reactrouter.com/web/guides/quick-start) ![React Router DOM](https://img.shields.io/badge/-React_Router_DOM-CA4245?style=flat-square&logo=React-Router&logoColor=white)
-
+![React.js](https://img.shields.io/badge/-React.js-61DAFB?style=flat-square&logo=React&logoColor=white) ![React Vite](https://img.shields.io/badge/-React_Vite-646CFF?style=flat-square&logo=Vite&logoColor=white) ![Chakra UI](https://img.shields.io/badge/-Chakra_UI-319795?style=flat-square&logo=Chakra-UI&logoColor=white) ![Firebase](https://img.shields.io/badge/-Firebase-FFCA28?style=flat-square&logo=Firebase&logoColor=black) ![React Router DOM](https://img.shields.io/badge/-React_Router_DOM-CA4245?style=flat-square&logo=React-Router&logoColor=white) 
 
     React.js: Used for creating the client-side user interface.
 
@@ -59,7 +47,7 @@ This project was created by Mathias Rodao.
 
 ------------------------------------------------------------------------------------------------
 
-### Descripción del Proyecto
+## Descripción del Proyecto
 
 FastFood es un e-commerce de comida rápida que permite a los usuarios explorar y comprar una variedad de productos de comida rápida. Los usuarios pueden ver una lista de productos, filtrarlos por categoría, ver detalles de productos individuales, agregar productos al carrito de compras, ver el contenido del carrito y proceder al pago a través de un formulario de facturación.
 
@@ -79,11 +67,7 @@ FastFood es un e-commerce de comida rápida que permite a los usuarios explorar 
 
 ### Tecnologías Utilizadas
 
-- [React.js](https://reactjs.org/) - Utilizado para la creación de la interfaz de usuario del cliente.
-- [React Vite](https://vitejs.dev/guide/) - Utilizado para la configuración del proyecto y el entorno de desarrollo rápido.
-- [Chakra UI](https://chakra-ui.com/) - Utilizado para el diseño y la creación de componentes de interfaz de usuario.
-- [Firebase](https://firebase.google.com/) - Plataforma de desarrollo de aplicaciones móviles y web desarrollada por Google, Utilizado como base de datos en tiempo real para almacenar información sobre productos y pedidos.
-- [React Router DOM](https://reactrouter.com/web/guides/quick-start) - Utilizado para la navegación dentro de la aplicación
+![React.js](https://img.shields.io/badge/-React.js-61DAFB?style=flat-square&logo=React&logoColor=white) ![React Vite](https://img.shields.io/badge/-React_Vite-646CFF?style=flat-square&logo=Vite&logoColor=white) ![Chakra UI](https://img.shields.io/badge/-Chakra_UI-319795?style=flat-square&logo=Chakra-UI&logoColor=white) ![Firebase](https://img.shields.io/badge/-Firebase-FFCA28?style=flat-square&logo=Firebase&logoColor=black) ![React Router DOM](https://img.shields.io/badge/-React_Router_DOM-CA4245?style=flat-square&logo=React-Router&logoColor=white)
 
     React.js: Utilizado para la creación de la interfaz de usuario del cliente.
 

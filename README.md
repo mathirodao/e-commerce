@@ -19,6 +19,14 @@ FastFood is a fast food e-commerce platform that allows users to explore and pur
     Billing Checkout: Users can proceed to checkout where they are prompted to complete a billing form with their name, email address, email verification, delivery address, and other details necessary for delivery.
     
 ### Technologies Used
+- ![React.js](https://img.shields.io/badge/-React.js-61DAFB?style=flat-square&logo=React&logoColor=white) [React.js](https://reactjs.org/)
+- ![React Vite](https://img.shields.io/badge/-React_Vite-646CFF?style=flat-square&logo=Vite&logoColor=white) [React Vite](https://vitejs.dev/guide/)
+- ![Chakra UI](https://img.shields.io/badge/-Chakra_UI-319795?style=flat-square&logo=Chakra-UI&logoColor=white) [Chakra UI](https://chakra-ui.com/)
+- ![Firebase](https://img.shields.io/badge/-Firebase-FFCA28?style=flat-square&logo=Firebase&logoColor=black) [Firebase](https://firebase.google.com/)
+- ![React Router DOM](https://img.shields.io/badge/-React_Router_DOM-CA4245?style=flat-square&logo=React-Router&logoColor=white) [React Router DOM](https://reactrouter.com/web/guides/quick-start)
+
+jeje
+
 - [React.js](https://reactjs.org/) ![React.js](https://img.shields.io/badge/-React.js-61DAFB?style=flat-square&logo=React&logoColor=white)
 - [React Vite](https://vitejs.dev/guide/) ![React Vite](https://img.shields.io/badge/-React_Vite-646CFF?style=flat-square&logo=Vite&logoColor=white)
 - [Chakra UI](https://chakra-ui.com/) ![Chakra UI](https://img.shields.io/badge/-Chakra_UI-319795?style=flat-square&logo=Chakra-UI&logoColor=white)

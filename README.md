@@ -1,10 +1,10 @@
-### Project Documentation: e-commerce / Documentación del Proyecto e-commerce 
+# Project Documentation: e-commerce / Documentación del Proyecto e-commerce 
 
-### Project Description
+## Project Description
 
 FastFood is a fast food e-commerce platform that allows users to explore and purchase a variety of fast food products. Users can view a list of products, filter them by category, view details of individual products, add products to the shopping cart, view the contents of the cart, and proceed to payment through a billing form.
 
-### Key Features
+## Key Features
 
     Explore Products: Users can view a complete list of fast food products available on the site.
 
@@ -64,6 +64,12 @@ FastFood es un e-commerce de comida rápida que permite a los usuarios explorar 
     Checkout de Facturación: Los usuarios pueden proceder al checkout donde se les solicita completar un formulario de facturación con su nombre, dirección de correo electrónico, verificación de correo electrónico, dirección de entrega y otros detalles necesarios para la entrega.
 
 ### Tecnologías Utilizadas
+
+- [React.js](https://reactjs.org/) - Utilizado para la creación de la interfaz de usuario del cliente.
+- [React Vite](https://vitejs.dev/guide/) - Utilizado para la configuración del proyecto y el entorno de desarrollo rápido.
+- [Chakra UI](https://chakra-ui.com/) - Utilizado para el diseño y la creación de componentes de interfaz de usuario.
+- [Firebase](https://firebase.google.com/) - Plataforma de desarrollo de aplicaciones móviles y web desarrollada por Google, Utilizado como base de datos en tiempo real para almacenar información sobre productos y pedidos.
+- [React Router DOM](https://reactrouter.com/web/guides/quick-start) - Utilizado para la navegación dentro de la aplicación
 
     React.js: Utilizado para la creación de la interfaz de usuario del cliente.
 

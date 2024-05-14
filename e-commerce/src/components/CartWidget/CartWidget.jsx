@@ -1,14 +1,13 @@
-import { Box } from '@chakra-ui/react';
-import React, { useState } from 'react'
+import { Box, Flex } from '@chakra-ui/react';
 import { FaShoppingCart } from "react-icons/fa";
 
 const CartWidget = ({ itemCount }) => { 
   
   return (
-    <Box style={{ color: 'black' }}>
+    <Flex alignItems="center">
       <FaShoppingCart />
-      {itemCount}
-    </Box>
+      <Box ml="2">({itemCount})</Box>
+    </Flex>
   )
 }
 

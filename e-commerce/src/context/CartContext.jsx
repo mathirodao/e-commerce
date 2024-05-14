@@ -43,7 +43,6 @@ export const ContextProvider = ({children}) => {
 
     const getQuantity = () => {
         let total = 0
-        // const total2 = cart.reduce((acc, item) => acc + item.quantity) verlo despues
 
         cart.forEach((product) =>{
             total = total + product.quantity

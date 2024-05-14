@@ -1,6 +1,6 @@
 import React from 'react'
 import Item from '../Item/Item'
-import { Box, Flex, Spacer, SimpleGrid } from "@chakra-ui/react";
+import { Box, Spacer, SimpleGrid } from "@chakra-ui/react";
 
 const ItemList = ({products}) => {
   return (
